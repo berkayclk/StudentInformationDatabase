@@ -1,0 +1,261 @@
+/*******************************************************************/
+/******************* TRIGGERS TRIGGERS **********************************/
+/******************************************************************/
+
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+
+/***************************** ectsUpdate ************************/
+CREATE TRIGGER ectsUpdate
+on UNDERGRADUATE
+AFTER UPDATE 
+as
+	declare @oldEcts int, @newisRegular int , @sID int
+	
+	select @newisRegular = isRegular from inserted
+	select @sID = studentID from inserted
+	select @oldEcts = ECTS from UNDERGRADUATE WHERE studentID = @sID
+
+BEGIN
+	if @newisRegular=0 and @oldEcts = 30
+		begin
+			update UNDERGRADUATE set ECTS = 42 where studentID = @sID
+		end
+	else if @newisRegular=1 and @oldEcts = 42
+		begin
+			update UNDERGRADUATE set ECTS = 30 where studentID = @sID
+		end
+
+END
+
+
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+
+/***************************** checkEcts ************************/
+
+CREATE TRIGGER checkEcts
+on ENROLL
+FOR INSERT 
+AS
+DECLARE @essentialECTS int, @totalECTS int,@sID int,@courseID int,@year int,@semester nvarchar(6),@courseECTS int
+
+select @sID=studentID , @courseID=courseID ,@year =year from inserted
+select @essentialECTS= ects from UNDERGRADUATE where studentID = @sID
+select @semester =  semester , @courseECTS = ECTS from COURSE WHERE COURSE.courseID =@courseID
+select @totalECTS = sum(C.ECTS) from COURSE AS C,ENROLL AS E WHERE E.year = @year AND C.semester = @semester AND C.courseID= E.courseID AND E.studentID=@sID
+
+BEGIN
+	IF @essentialECTS < (@totalECTS)
+	begin
+		RAISERROR('Bu dönem alabileceðiniz maximum krediyi aþtýnýz',12,1);
+		rollback
+	end
+END
+
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+
+/**************************** irregularAdd oparation for IRREGULAR *********************/
+
+CREATE TRIGGER irregularAdd
+on IRREGULAR
+AFTER INSERT
+AS
+DECLARE @sID int
+select @sID = studentID from inserted
+BEGIN 
+	if (select count(*) from IRREGULAR where studentID = @sID) = 1
+	begin
+		update UNDERGRADUATE SET isRegular = 0 where studentID = @sID
+	end
+END
+
+GO
+/**************************** regularAdd oparation for REGULAR *********************/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TRIGGER regularAdd
+on REGULAR
+AFTER INSERT
+AS
+DECLARE @sID int, @cID int  
+select @sID = studentID , @cID = pastCourseID from inserted
+BEGIN 
+	IF EXISTS (select *  from IRREGULAR where studentID = @sID AND failCourseID = @cID)
+	BEGIN
+		DELETE FROM IRREGULAR where studentID = @sID AND failCourseID = @cID
+	END
+
+	if NOT EXISTS(select * from IRREGULAR Where studentID = @sID)
+	begin
+		UPDATE UNDERGRADUATE SET isRegular = 1 where studentID = @sID
+	end 
+END
+
+
+GO
+
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+
+/**************************** addMembers oparation for REGULAR *********************/
+	
+	
+CREATE TRIGGER addMembers
+on ENROLL
+AFTER INSERT
+AS
+declare @cID int, @sID int
+select @sID = studentID ,@cID = courseID from inserted
+BEGIN 
+	IF not exists (select * from MEMBERS Where pageID= @cID and studentID = @sID)
+	begin
+		INSERT INTO MEMBERS VALUES (@sID,@cID) 
+	end
+END
+
+GO
+
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+
+/**************************** delete oparation *********************/
+
+CREATE TRIGGER deleteOparation_STUDENT
+on STUDENT
+AFTER DELETE
+AS
+declare @PID int
+select @PID = personID FROM deleted
+BEGIN
+	DELETE FROM PERSON WHERE personID = @PID
+END
+
+GO
+
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+
+
+CREATE TRIGGER deleteOparation_PROF
+on PROFESSOR
+AFTER DELETE
+AS
+declare @PID int
+select @PID = personID FROM deleted
+BEGIN
+	DELETE FROM PERSON WHERE personID = @PID
+END
+
+GO
+
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+
+
+CREATE TRIGGER deleteOparation_UNDERGRADUATE
+on UNDERGRADUATE
+AFTER DELETE
+AS
+declare @sID int
+select @sID = studentID FROM deleted
+BEGIN
+	DELETE FROM STUDENT WHERE studentID = @sID
+END
+
+GO
+
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+
+
+
+CREATE TRIGGER deleteOparation_GRADUATE
+on GRADUATE
+AFTER DELETE
+AS
+declare @sID int
+select @sID = studentID FROM deleted
+BEGIN
+	DELETE FROM STUDENT WHERE studentID = @sID
+END
+
+GO
+
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+
+
+
+
+
+
+
+CREATE TRIGGER facePageCreate
+on TEACHS_ON
+AFTER INSERT
+AS 
+DECLARE @cID int, @aID int, @cName nvarchar(50)
+select @cID = courseID , @aID = profID from inserted
+select @cName = name from COURSE WHERE courseID = @cID
+ 
+BEGIN
+	IF NOT EXISTS(select pageID from FACEBOOKPAGE where pageID = @cID)
+	begin
+		INSERT INTO FACEBOOKPAGE (pageID,name, adminID) values (@cID,@cName,@aID)
+	end
+END
+
+GO
+
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+
+
+CREATE TRIGGER addLinkedin
+ON PERSON
+AFTER INSERT
+as
+DECLARE @pID int, @name nvarchar(50) , @mailAdress nvarchar(50)
+select @pID = personID , @name = name from inserted
+BEGIN
+	SET @mailAdress =  CONVERT(nvarchar(30),@pID)+'@ege.edu.tr'
+	IF @pID <28
+	begin	
+		INSERT INTO LINKEDIN_MEMBERS (memName,personID,mailAdress) values(@name,@pID,@mailAdress)
+	END
+	ELSE IF @pID %3 =0
+		BEGIN
+			INSERT INTO LINKEDIN_MEMBERS (memName,personID,mailAdress) values(@name,@pID,@mailAdress)
+		END
+END
+
+GO
+
+/*******************************************************************/
+/******************* END TRIGGERS **********************************/
+/******************************************************************/

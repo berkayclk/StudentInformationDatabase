@@ -1,0 +1,226 @@
+/* Bölümlerdeki öðrenci sayýsý (2 tablo) */ 
+
+SELECT D.name AS "BÖLÜM", COUNT(R.studentID) AS "ÖÐRENCÝ SAYISI"
+from REGISTRATION R , DEPARTMENT D
+WHERE R.deptID = D.deptID
+GROUP BY D.name
+
+/* Akademik Birimlerin Bölüm Sayýlarý (2 tablo) */ 
+select A.name AS "AKADEMÝK BÝRÝM" , COUNT(d.deptID)
+FROM ACADEMIC_UNIT A, DEPARTMENT D
+WHERE A.unitID = D.unitID
+GROUP BY A.name
+
+
+/* Akademik Birimlerin Dekanlarý (2 tablo) */ 
+select A.name AS "AKADEMÝK BÝRÝM" , P.name + ' ' + p.surname as "DEKAN"
+FROM ACADEMIC_UNIT A, PROFESSOR p
+WHERE A.deanID = P.profID
+
+
+/****************************************************************************************************************************/
+
+/* 1 numaralý öðrencinin 2014 Fall Döneminde alýðý dersler (3 tablo) */ 
+
+select distinct C.name as "DERS" 
+from UNDERGRADUATE U , COURSE C, ENROLL E 
+WHERE   U.studentID = E.studentID AND 
+		E.courseID = C.courseID AND
+		C.semester ='Fall' AND
+		E.year = 2014 AND
+		U.studentID = 1
+
+/* Profesorlerin hangi bölümde ne zaman iþe baþladýklarýný listele (3 tablo) */ 
+
+select P.name + ' '+ P.surname AS "PROFESSÖR", D.name AS "BÖLÜM" , W.beginDate AS "BAÞLAMA TARÝHÝ"
+FROM PROFESSOR P , WORKS_ON W, DEPARTMENT D
+WHERE P.profID = W.profID AND 
+      W.deptID = D.deptID
+ORDER BY D.name ASC
+
+
+/* IRREGULAR öðrencilerin kaldýklarý dersler (3 tablo) */ 
+
+select U.name + ' ' + U.surname as "ÖÐRENCÝ" , C.name AS "KALDIÐI DERS"
+FROM UNDERGRADUATE U , IRREGULAR I , COURSE C
+WHERE I.studentID = U.studentID AND I.failCourseID = C.courseID
+
+
+/* En çok baþvurulan þirket ve baþvuru sayýsý (3 tablo) */ 
+SELECT TOP 1 L.memName, COUNT(applicantID)
+from LINKEDIN_MEMBERS L, ADVERT A , APPLICANT B
+WHERE A.advertID = B.advertID AND A.memberID = L.memID
+GROUP BY L.memName
+ORDER BY COUNT(applicantID) DESC)
+
+
+/****************************************************************************************************************************/
+
+/* 2 numaralý öðrencinin þimdiye kadar dersine giren professörler (4 tablo) */ 
+
+SELECT distinct P.name+ ' '+ p.surname as "PROFERSOR"  
+FROM UNDERGRADUATE U , ENROLL E , TEACHS_ON T ,PROFESSOR P
+WHERE U.studentID = E.studentID AND 
+	E.courseID = T.courseID AND 
+	T.profID = P.profID AND
+	U.studentID = 2
+
+/* Mühendislik fakültesinden 3 ortalamanýn üstünde mezun olan öðrenciler. (4 tablo) */ 
+
+SELECT G.studentID as "ÖÐRENCÝ NUMARASI" , G.name as "AD SOYAD", G.avarage AS "ORTALAMA"
+FROM GRADUATE G, REGISTRATION R , DEPARTMENT D, ACADEMIC_UNIT A
+WHERE G.studentID = R.studentID AND
+	 R.deptID = D.deptID AND
+	 D.unitID = A.unitID AND
+	 A.name = 'MÜHENDÝSLÝK FAKÜLTESÝ' AND
+	 G.avarage >=3
+
+/* AKADEMÝK BÝRÝMLERDEKÝ FULL PROFESSOR SAYISI (4 tablo) */ 
+
+SELECT A.name AS "AKADEMÝK BÝRÝM" , count(P.profID) as "PROFESSOR SAYISI"
+FROM PROFESSOR P, WORKS_ON W , DEPARTMENT D, ACADEMIC_UNIT A
+WHERE P.profID = W.profID AND
+	 W.deptID = D.deptID AND
+	 D.unitID = A.unitID AND
+     P.profType = 'Full' 
+GROUP BY A.name
+ORDER BY count(P.profID) DESC
+
+
+/****************************************************************************************************************************/
+
+/****************************************************************************************************************************/
+
+/* Bilgisar Mühendisliði okuyup linkedin üyesi olanlar (exists SORGU )*/
+
+SELECT L.memID as "ÜYE NUMARASI",L.personID as "KÝMLÝK NO",memName as "ÝSÝM", mailAdress as "MAÝL ADRESÝ"
+FROM LINKEDIN_MEMBERS L 
+WHERE EXISTS(SELECT * 
+			FROM UNDERGRADUATE U, REGISTRATION R,DEPARTMENT D
+			WHERE L.personID= U.personID AND 
+					U.studentID = R.studentID AND
+					R.deptID = D.deptID AND
+					D.name = 'Bilgisayar Mühendisliði')
+
+
+
+SELECT studentID as "ÖÐRENCÝ NUMARASI",U.name+ ' ' + U.surname as "AD SOYAD"
+FROM UNDERGRADUATE U
+WHERE exists (select *
+			FROM REGISTRATION R, DEPARTMENT D
+			WHERE U.studentID = R.studentID AND
+				R.deptID = D.deptID AND
+				D.name = 'Bilgisayar Mühendisliði' AND
+				NOT EXISTS(select *
+						FROM ENROLL E,COURSE C,TEACHS_ON T, PROFESSOR P
+						WHERE E.studentID = U.studentID AND
+							E.courseID = C.courseID AND
+							C.courseID = T.courseID AND
+							T.profID = P.profID  AND
+							P.name = 'Vecdi' AND
+							P.surname = 'Aytaç'))
+					
+					
+
+/****************************************************************************************************************************/
+
+/****************************************************************************************************************************/
+
+/*  En çok baþvurulan ilana vaþvuranlar (ÝÇ ÝÇE SORGU )*/
+
+SELECT L.memName
+FROM LINKEDIN_MEMBERS L , APPLICANT A
+WHERE A.applicantID = L.memID AND  A.advertID = (SELECT MAX(advertID)
+					from APPLICANT 
+					group by advertID
+					order by  COUNT(applicantID) desc)
+
+
+/*  Birden fazla hocanýn verdiði dersler ve hoca sayýsý (ÝÇ ÝÇE SORGU )*/
+
+ SELECT name AS "DERS", count(name) AS "PROFESSOR SAYISI" 
+			FROM COURSE C , TEACHS_ON T
+			WHERE C.courseID = T.courseID AND
+				C.courseID IN (select courseID 
+								FROM TEACHS_ON E 
+								wHERE T.courseID = E.courseID AND
+								T.profID <> E.profID)
+GROUP BY name
+ORDER BY count(name) DESC
+
+
+/*  DÝÞ HEKÝMLÐÝNDEN MEZUN OLANLARIN LÝNKEDÝN PROFÝLÝ (ÝÇ ÝÇE SORGU )*/
+
+
+SELECT memID as "ÜYE NUMARASI" , memName as "AD" , mailAdress as "Mail" , C.name AS "ÇALIÞTIÐI ÞÝRKET"
+FROM LINKEDIN_MEMBERS L
+RIGHT JOIN COMPANY C
+ON L.companyID = C.companyID
+WHERE L.isCompany = 0 AND 
+	 L.personID IN (SELECT G.personID
+					FROM GRADUATE G, REGISTRATION R, DEPARTMENT D,ACADEMIC_UNIT A
+					WHERE G.studentID = R.studentID AND
+						R.deptID = D.deptID  AND
+						D.unitID = A.unitID AND
+						A.name = 'DÝÞ HEKÝMLÝÐÝ FAKÜLTESÝ')
+
+/*  AKTÝF ÝLANI OLAN ÞÝRKETLER (ÝÇ ÝÇE SORGU )*/
+
+SELECT L.memName as "ÞÝRKET"
+FROM LINKEDIN_MEMBERS L
+WHERE L.memID IN (SELECT A.memberID
+					  FROM ADVERT A
+					   WHERE A.memberID = L.memID)
+
+/****************************************************************************************************************************/
+
+/****************************************************************************************************************************/
+
+/*  FACEBOOK sayfalarý ve adminleri (join)*/
+
+
+SELECT F.name as "SAYFA ADI", P.name+ ' ' + P.surname as "ADMÝN"
+FROM FACEBOOKPAGE F
+LEFT JOIN PROFESSOR P
+ON P.profID = F.adminID
+
+/*  MATEMATÝK 1 DERSÝNÝ ALAN ÖÐRENCÝLER (join)*/
+
+SELECT U.studentID as "ÖÐRENCÝ NO", U.name+ ' ' + U.surname as "ÖÐRENCÝ", C.name as "DERS"
+FROM UNDERGRADUATE U
+LEFT JOIN ENROLL E
+ON E.studentID = U.studentID
+JOIN COURSE C
+ON E.courseID = C.courseID AND C.name='MATEMATÝK-I'
+
+
+/* LINKED ÜYESÝ ÖÐRENCÝLER   (join)*/
+
+SELECT U.studentID as "ÖÐRENCÝ NO", U.name+ ' ' + U.surname as "ÖÐRENCÝ"
+FROM UNDERGRADUATE U
+RIGHT JOIN LINKEDIN_MEMBERS L
+ON L.personID = U.personID
+where U.studentID is not null
+
+
+
+/* DERS - AKADEMÝK BÝRÝM - BÖLÜM  sorgusu    (join) */
+
+SELECT C.name,A.name , D.name 
+FROM ACADEMIC_UNIT A
+FULL OUTER JOIN DEPARTMENT D
+ON A.unitID = D.unitID
+FULL OUTER JOIN HAS H
+ON H.deptID = D.deptID
+FULL OUTER JOIN COURSE C
+ON C.courseID = H.courseID
+ORDER BY A.name
+
+
+/****************************************************************************************************************************/
+
+/****************************************************************************************************************************/
+
+DELETE FROM IRREGULAR WHERE studentID = 2 AND failCourseID = 12
+
+UPDATE TEACHS_ON SET profID = 3 WHERE courseID = 9 and profID = 2

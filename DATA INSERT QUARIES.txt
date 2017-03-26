@@ -1,0 +1,1082 @@
+/****************************************************************************/
+/************** ÝNSAN INPUTS***********************************************/
+/****************************************************************************/
+
+
+/*** PROFESSOR INPUTS  (profID int,personID int, profType varchar(10),name nvarchar(30),surname nvarchar(30),birthday date,sex nvarchar(5),adress nvarchar(100) ,telefon nvarchar(11)) ***/
+
+
+INSERT INTO PERSON Values (1,'Özgür','GÜMÜÞ','1970-05-23','Erkek','Mersin','05379354414')
+INSERT INTO PROFESSOR Values (1,1,'Associate','Özgür','GÜMÜÞ','1970-05-23','Erkek','Mersin','05379354414')
+
+INSERT INTO PERSON Values (2,'Sema','BODUR','1980-08-11','Kadýn','Manisa','05379745678')
+INSERT INTO PROFESSOR Values (2,2,'Assistant','Sema','BODUR','1980-08-11','Kadýn','Manisa','05379745678')
+
+INSERT INTO PERSON Values (3,'Ahmet','EGESOY','1975-03-09','Erkek','Ankara','05377899658')
+INSERT INTO PROFESSOR Values (3,3,'Associate','Ahmet','EGESOY','1975-03-09','Erkek','Ankara','05377899658')
+
+INSERT INTO PERSON Values (4,'Levent','TOKER','1960-09-07','Erkek','Ýzmir','05389514785')
+INSERT INTO PROFESSOR Values (4,4,'Full','Levent','TOKER','1960-09-07','Erkek','Ýzmir','05389514785')
+
+INSERT INTO PERSON Values (5,'Murat Osman','ÜNALIR','1970-10-28','Erkek','Denizli','05059632596')
+INSERT INTO PROFESSOR Values (5,5,'Associate','Murat Osman','ÜNALIR','1970-10-28','Erkek','Denizli','05059632596')
+
+INSERT INTO PERSON Values (6,'Þebnem','Bora','1973-07-22','Kadýn','Ýzmir','05359512365')
+INSERT INTO PROFESSOR Values (6,6,'Associate','Þebnem','Bora','1973-07-22','Kadýn','Ýzmir','05359512365')
+
+INSERT INTO PERSON Values (7,'Vecdi','Aytaç','1965-06-12','Erkek','Muðla','05064569852')
+INSERT INTO PROFESSOR Values (7,7,'Associate','Vecdi','Aytaç','1965-06-12','Erkek','Muðla','05064569852')
+
+INSERT INTO PERSON Values (8,'Serdar','KORUOÐLU','1962-03-11','Erkek','Osmaniye','05459624862')
+INSERT INTO PROFESSOR Values (8,8,'Full','Serdar','KORUOGLU','1962-03-11','Erkek','Osmaniye','05459624862')
+
+INSERT INTO PERSON Values (9,'Rýza Cenk','ERDUR','1967-05-08','Erkek','Ýzmir','05064568945')
+INSERT INTO PROFESSOR Values (9,9,'Associate','Rýza Cenk','ERDUR','1967-05-08','Erkek','Ýzmir','05064568945')
+
+INSERT INTO PERSON Values (10,'Özgü','CAN','1979-07-07','Kadýn','Ýzmir','05559736585')
+INSERT INTO PROFESSOR Values (10,10,'Associate','Özgü','CAN','1979-07-07','Kadýn','Ýzmir','05559736585')
+
+INSERT INTO PERSON Values (11,'Semih','ÖTLEÞ','1961-08-28','Erkek','Ýzmir','05056981285')
+INSERT INTO PROFESSOR Values (11,11,'Full','Semih','ÖTLEÞ','1961-08-28','Erkek','Ýzmir','05056981285')
+
+INSERT INTO PERSON Values (12,'Özgül Özdestan','OCAK','1975-01-10','Kadýn','Antalya','05367458642')
+INSERT INTO PROFESSOR Values (12,12,'Associate','Özgül Özdestan','OCAK','1975-01-10','Kadýn','Antalya','05367458642')
+
+INSERT INTO PERSON Values (13,'Sedef Nehri','EL','1971-03-22','Kadýn','Hatay','05335558796')
+INSERT INTO PROFESSOR Values (13,13,'Full','Sedef Nehri','EL','1980-03-22','Kadýn','Hatay','05335558796')
+
+INSERT INTO PERSON Values (14,'Yavuz','ÖZÇELÝK','1963-08-27','Erkek','Ýzmir','05336669875')
+INSERT INTO PROFESSOR Values (14,14,'Full','Yavuz','ÖZÇELÝK','1963-08-27','Erkek','Ýzmir','05336669875')
+
+INSERT INTO PERSON Values (15,'Sibel','KARAKAYA','1971-09-11','Kadýn','Ýstanbul','05343669877')
+INSERT INTO PROFESSOR Values (15,15,'Full','Sibel','KARAKAYA','1971-09-11','Kadýn','Ýstanbul','05343669877')
+
+INSERT INTO PERSON Values (16,'Recep','ÇELÝK','1972-08-16','Erkek','Karabük','05346548963')
+INSERT INTO PROFESSOR Values (16,16,'Full','Recep','ÇELÝK','1972-08-16','Erkek','Karabük','05346548963')
+
+INSERT INTO PERSON Values (17,'Salim','TOKAN','1975-04-09','Erkek','Bartýn','05362223536')
+INSERT INTO PROFESSOR Values (17,17,'Associate','Salim','TOKAN','1975-04-09','Erkek','Bartýn','05362223536')
+
+INSERT INTO PERSON Values (18,'Emre','BAÞIKARA','1979-05-05','Erkek','Karabük','05367778596')
+INSERT INTO PROFESSOR Values (18,18,'Full','Emre','BAÞIKARA','1979-05-05','Erkek','Karabük','05367778596')
+
+INSERT INTO PERSON Values (19,'Tevfik','YAZICI','1960-06-21','Erkek','Rize','05056232031')
+INSERT INTO PROFESSOR Values (19,19,'Full','Tevfik','YAZICI','1960-06-21','Erkek','Rize','05056232031')
+
+INSERT INTO PERSON Values (20,'Toygar','SOLAK','1978-01-14','Erkek','Ýzmir','05368886645')
+INSERT INTO PROFESSOR Values (20,20,'Associate','Toygar','SOLAK','1978-01-14','Erkek','Ýzmir','05368886645')
+
+INSERT INTO PERSON Values (21,'Mahmut','UZUN','1977-02-06','Erkek','Malatya','05346569878')
+INSERT INTO PROFESSOR Values (21,21,'Full','Mahmut','UZUN','1977-02-06','Erkek','Malatya','05346569878')
+
+INSERT INTO PERSON Values (22,'Rýdvan','ÞEN','1983-09-30','Erkek','Samsun','05354446569')
+INSERT INTO PROFESSOR Values (22,22,'Assistant','Rýdvan','ÞEN','1983-09-30','Erkek','Samsun','05354446569')
+
+INSERT INTO PERSON Values (23,'Coþkun','HARMANÞAH','1980-07-20','Erkek','Ankara','05353236598')
+INSERT INTO PROFESSOR Values (23,23,'Associate','Coþkun','HARMANÞAH','1980-07-20','Erkek','Ankara','05353236598')
+
+INSERT INTO PERSON Values (24,'Ayhan','UÐUR','1985-11-07','Erkek','Erzincan','05059874512')
+INSERT INTO PROFESSOR Values (24,24,'Assistant','Ayhan','UÐUR','1985-11-07','Erkek','Erzincan','05059874512')
+
+INSERT INTO PERSON Values (25,'Ali Varsýn','KEMAHLIOÐLU','1979-02-20','Erkek','Sinop','05451114548')
+INSERT INTO PROFESSOR Values (25,25,'Assistant','Ali Varsýn','KEMAHLIOÐLU','1979-02-20','Erkek','Sinop','05451114548')
+
+INSERT INTO PERSON Values (26,'Necdet','YILDIZ','1974-08-01','Erkek','Ýzmir','05071597863') 
+INSERT INTO PROFESSOR Values (26,26,'Associate','Necdet','YILDIZ','1974-08-01','Erkek','Ýzmir','05071597863')
+
+INSERT INTO PERSON Values (27,'Mehmet','DEDE','1982-04-19','Erkek','Çanakkale','05063267895') 
+INSERT INTO PROFESSOR Values (27,27,'Assistant','Mehmet','DEDE','1982-04-19','Erkek','Çanakkale','05063267895') 
+
+
+/*****  UNDERGRADUATE INPUTS (studentID,personID int, ECTS int,isRegular bit,classLevel int,entryDate int,name nvarchar(30),surname nvarchar(30),birthday date,sex nvarchar(5),adress nvarchar(100) ,telefon nvarchar(11)) ***/
+
+
+INSERT INTO PERSON Values (28,'Berkay','Çelik','1996-07-23','Erkek','Karabuk','05379792414')
+INSERT INTO STUDENT Values (1,28,'Berkay','Çelik','1996-07-23','Erkek','Karabuk','05379792414')
+INSERT INTO UNDERGRADUATE Values (1,28,30,1,1,2014,'Berkay','Çelik','1996-07-23','Erkek','Karabuk','05379792414')
+
+INSERT INTO PERSON Values (29,'Erkut','YAZICI','1996-01-14','Erkek','Rize','05063267026')
+INSERT INTO STUDENT Values (2,29,'Erkut','YAZICI','1996-01-14','Erkek','Rize','05063267026')
+INSERT INTO UNDERGRADUATE Values (2,29,30,1,1,2014,'Erkut','YAZICI','1996-01-14','Erkek','Rize','05063267026')
+
+INSERT INTO PERSON Values (30,'Toygar','SOLAK','1996-01-14','Erkek','Rize','05324567845')
+INSERT INTO STUDENT Values (3,30,'Toygar','SOLAK','1996-01-14','Erkek','Rize','05324567845')
+INSERT INTO UNDERGRADUATE Values (3,30,30,1,1,2013,'Toygar','SOLAK','1996-01-14','Erkek','Ýzmir','05324567845')
+
+INSERT INTO PERSON Values (31,'Onur','ÖTLEÞ','1994-01-07','Erkek','Ýzmir','05358523625')
+INSERT INTO STUDENT Values (4,31,'Onur','ÖTLEÞ','1994-01-07','Erkek','Ýzmir','05358523625')
+INSERT INTO UNDERGRADUATE Values (4,31,30,1,1,2012,'Onur','ÖTLEÞ','1994-01-07','Erkek','Ýzmir','05358523625')
+
+INSERT INTO PERSON Values (32,'Serkan','UZUN','1998-08-08','Erkek','Malatya','05368426842')
+INSERT INTO STUDENT Values (5,32,'Serkan','UZUN','1998-08-08','Erkek','Malatya','05368426842')
+INSERT INTO UNDERGRADUATE Values (5,32,30,1,1,2016,'Serkan','UZUN','1998-08-08','Erkek','Malatya','05368426842')
+
+INSERT INTO PERSON Values (33,'Berkay','ERGÜVEN','1997-11-15','Erkek','Manisa','05369987753')
+INSERT INTO STUDENT Values (6,33,'Berkay','ERGÜVEN','1997-11-15','Erkek','Manisa','05369987753')
+INSERT INTO UNDERGRADUATE Values (6,33,30,1,1,2015,'Berkay','ERGÜVEN','1997-11-15','Erkek','Manisa','05369987753')
+
+INSERT INTO PERSON Values (34,'Ayþe','KIRDAR','1996-05-06','Kadýn','Ýstanbul','05073268899')
+INSERT INTO STUDENT Values (7,34,'Ayþe','KIRDAR','1996-05-06','Kadýn','Ýstanbul','05073268899')
+INSERT INTO UNDERGRADUATE Values (7,34,30,1,1,2014,'Ayþe','KIRDAR','1996-05-06','Kadýn','Ýstanbul','05073268899')
+
+INSERT INTO PERSON Values (35,'Zeynep','MAZLUM','1995-01-24','Kadýn','Trabzon','05065698899')
+INSERT INTO STUDENT Values (8,35,'Zeynep','MAZLUM','1995-01-24','Kadýn','Trabzon','05065698899')
+INSERT INTO UNDERGRADUATE Values (8,35,30,1,1,2014,'Zeynep','MAZLUM','1995-01-24','Kadýn','Trabzon','05065698899')
+
+INSERT INTO PERSON Values (36,'Övünç','DENÝZ','1994-08-22','Erkek','Aydýn','05059512626')
+INSERT INTO STUDENT Values (9,36,'Övünç','DENÝZ','1994-08-22','Erkek','Aydýn','05059512626')
+INSERT INTO UNDERGRADUATE Values (9,36,30,1,1,2014,'Övünç','DENÝZ','1994-08-22','Erkek','Aydýn','05059512626')
+
+INSERT INTO PERSON Values (37,'Cenker','ATAÇ','1996-05-06','Erkek','Rize','05356989966')
+INSERT INTO STUDENT Values (11,37,'Cenker','ATAÇ','1996-05-06','Erkek','Rize','05356989966')
+INSERT INTO UNDERGRADUATE Values (11,37,30,1,1,2015,'Cenker','ATAÇ','1996-05-06','Erkek','Rize','05356989966')
+
+INSERT INTO PERSON Values (38,'Ali','YILMAZ','1994-06-12','Erkek','Artvin','05367774549')
+INSERT INTO STUDENT Values (12,38,'Ali','YILMAZ','1994-06-12','Erkek','Artvin','05367774549')
+INSERT INTO UNDERGRADUATE Values (12,38,30,1,1,2014,'Ali','YILMAZ','1994-06-12','Erkek','Artvin','05367774549')
+
+INSERT INTO PERSON Values (39,'Neþe','YAZICI','1995-08-15','Kadýn','Ankara','05056532032')
+INSERT INTO STUDENT Values (13,39,'Neþe','YAZICI','1995-08-15','Kadýn','Ankara','05056532032')
+INSERT INTO UNDERGRADUATE Values (13,39,30,1,1,2013,'Neþe','YAZICI','1995-08-15','Kadýn','Ankara','05056532032')
+
+INSERT INTO PERSON Values (40,'Neslihan','DURAK','1994-09-22','Kadýn','Yalova','05364569972')
+INSERT INTO STUDENT Values (14,40,'Neslihan','DURAK','1994-09-22','Kadýn','Yalova','05364569972')
+INSERT INTO UNDERGRADUATE Values (14,40,30,1,1,2014,'Neslihan','DURAK','1994-09-22','Kadýn','Yalova','05364569972')
+
+INSERT INTO PERSON Values (41,'Ýhsan','KILIÇ','1995-07-26','Erkek','Ordu','05367789332')
+INSERT INTO STUDENT Values (15,41,'Ýhsan','KILIÇ','1995-07-26','Erkek','Ordu','05367789332')
+INSERT INTO UNDERGRADUATE Values (15,41,30,1,1,2013,'Ýhsan','KILIÇ','1995-07-26','Erkek','Ordu','05367789332')
+
+INSERT INTO PERSON Values (42,'Hanife','SEVÝM','1996-07-27','Kadýn','Bursa','05346597878')
+INSERT INTO STUDENT Values (16,42,'Hanife','SEVÝM','1996-07-27','Kadýn','Bursa','05346597878')
+INSERT INTO UNDERGRADUATE Values (16,42,30,1,1,2014,'Hanife','SEVÝM','1996-07-27','Kadýn','Bursa','05346597878')
+
+INSERT INTO PERSON Values (43,'Ahmet','HAÞÝM','1997-09-01','Erkek','Ýzmir','05324567896')
+INSERT INTO STUDENT Values (17,43,'Ahmet','HAÞÝM','1997-09-01','Erkek','Ýzmir','05324567896')
+INSERT INTO UNDERGRADUATE Values (17,43,30,1,1,2015,'Ahmet','HAÞÝM','1997-09-01','Erkek','Ýzmir','05324567896')
+
+INSERT INTO PERSON Values (44,'Ali','SUNAL','1993-10-11','Erkek','Edirne','05554562525')
+INSERT INTO STUDENT Values (18,44,'Ali','SUNAL','1993-10-11','Erkek','Edirne','05554562525')
+INSERT INTO UNDERGRADUATE Values (18,44,30,1,1,2015,'Ali','SUNAL','1993-10-11','Erkek','Edirne','05554562525')
+
+INSERT INTO PERSON Values (45,'Fatma','TURGUT','1995-11-08','Kadýn','Ýstanbul','05369885959')
+INSERT INTO STUDENT Values (19,45,'Fatma','TURGUT','1995-11-08','Kadýn','Ýstanbul','05369885959')
+INSERT INTO UNDERGRADUATE Values (19,45,30,1,1,2014,'Fatma','TURGUT','1995-11-08','Kadýn','Ýstanbul','05369885959')
+
+INSERT INTO PERSON Values (46,'Ayþe','DELÝ','1996-03-11','Kadýn','Diyarbakýr','05066669866')
+INSERT INTO STUDENT Values (20,46,'Ayþe','DELÝ','1996-03-11','Kadýn','Diyarbakýr','05066669866')
+INSERT INTO UNDERGRADUATE Values (20,46,30,1,1,2015,'Ayþe','DELÝ','1996-03-11','Kadýn','Diyarbakýr','05066669866')
+
+INSERT INTO PERSON Values (47,'Mehmet','AKÝF','1992-05-17','Erkek','Erzurum','05557893535')
+INSERT INTO STUDENT Values (21,47,'Mehmet','AKÝF','1992-05-17','Erkek','Erzurum','05557893535')
+INSERT INTO UNDERGRADUATE Values (21,47,30,1,1,2013,'Mehmet','AKÝF','1992-05-17','Erkek','Erzurum','05557893535')
+
+INSERT INTO PERSON Values (48,'Levent','UZUN','1994-07-30','Erkek','Balýkesir','05078956698')
+INSERT INTO STUDENT Values (22,48,'Levent','UZUN','1994-07-30','Erkek','Balýkesir','05078956698')
+INSERT INTO UNDERGRADUATE Values (22,48,30,1,1,2013,'Levent','UZUN','1994-07-30','Erkek','Balýkesir','05078956698')
+
+INSERT INTO PERSON Values (49,'Musa','KISA','1995-02-20','Erkek','Ýzmir','05353533535')
+INSERT INTO STUDENT Values (23,49,'Musa','KISA','1995-02-20','Erkek','Ýzmir','05353533535')
+INSERT INTO UNDERGRADUATE Values (23,49,30,1,1,2014,'Musa','KISA','1995-02-20','Erkek','Ýzmir','05353533535')
+
+INSERT INTO PERSON Values (50,'Ceren','ATAÇ','1996-04-09','Kadýn','Rize','05064562525')
+INSERT INTO STUDENT Values (24,50,'Ceren','ATAÇ','1996-04-09','Kadýn','Rize','05064562525')
+INSERT INTO UNDERGRADUATE Values (24,50,30,1,1,2014,'Ceren','ATAÇ','1996-04-09','Kadýn','Rize','05064562525')
+
+INSERT INTO PERSON Values (51,'Tayfun','YILMAZ','1994-09-23','Erkek','Burdur','05324848547')
+INSERT INTO STUDENT Values (25,51,'Tayfun','YILMAZ','1994-09-23','Erkek','Burdur','05324848547')
+INSERT INTO UNDERGRADUATE Values (25,51,30,1,1,2013,'Tayfun','YILMAZ','1994-09-23','Erkek','Burdur','05324848547')
+
+INSERT INTO PERSON Values (52,'Melis','SIKICI','1995-11-11','Kadýn','Ýzmir','05346669896')
+INSERT INTO STUDENT Values (26,52,'Melis','SIKICI','1995-11-11','Kadýn','Ýzmir','05346669896')
+INSERT INTO UNDERGRADUATE Values (26,52,30,1,1,2014,'Melis','SIKICI','1995-11-11','Kadýn','Ýzmir','05346669896')
+
+INSERT INTO PERSON Values (53,'Melek','DURMUÞ','1994-01-01','Kadýn','Ýzmir','05067663232')
+INSERT INTO STUDENT Values (27,53,'Melek','DURMUÞ','1994-01-01','Kadýn','Ýzmir','05067663232')
+INSERT INTO UNDERGRADUATE Values (27,53,30,1,1,2014,'Melek','DURMUÞ','1994-01-01','Kadýn','Ýzmir','05067663232')
+
+INSERT INTO PERSON Values (54,'Selami','ÞAHÝN','1995-02-22','Erkek','Ankara','05347894545')
+INSERT INTO STUDENT Values (28,54,'Selami','ÞAHÝN','1995-02-22','Erkek','Ankara','05347894545')
+INSERT INTO UNDERGRADUATE Values (28,54,30,1,1,2013,'Selami','ÞAHÝN','1995-02-22','Erkek','Ankara','05347894545')
+
+INSERT INTO PERSON Values (55,'Cengiz','KURTOÐLU','1994-12-12','Erkek','Artvin','05074223131')
+INSERT INTO STUDENT Values (29,55,'Cengiz','KURTOÐLU','1994-12-12','Erkek','Artvin','05074223131')
+INSERT INTO UNDERGRADUATE Values (29,55,30,1,1,2013,'Cengiz','KURTOÐLU','1994-12-12','Erkek','Artvin','05074223131')
+
+INSERT INTO PERSON Values (56,'Nilgün','KRAL','1996-08-24','Kadýn','Ankara','05379798585')
+INSERT INTO STUDENT Values (30,56,'Nilgün','KRAL','1996-08-24','Kadýn','Ankara','05379798585')
+INSERT INTO UNDERGRADUATE Values (30,56,30,1,1,2014,'Nilgün','KRAL','1996-08-24','Kadýn','Ankara','05379798585')
+
+INSERT INTO PERSON Values (57,'Murat','KARA','1996-10-09','Erkek','Trabzon','05056784545')
+INSERT INTO STUDENT Values (31,57,'Murat','KARA','1996-10-09','Erkek','Trabzon','05056784545')
+INSERT INTO UNDERGRADUATE Values (31,57,30,1,1,2014,'Murat','KARA','1996-10-09','Erkek','Trabzon','05056784545')
+
+INSERT INTO PERSON Values (58,'Ýsmet','AÐIRMAN','1995-12-01','Erkek','Trabzon','05314583536')
+INSERT INTO STUDENT Values (32,58,'Ýsmet','AÐIRMAN','1995-12-01','Erkek','Trabzon','05314583536')
+INSERT INTO UNDERGRADUATE Values (32,58,30,1,1,2013,'Ýsmet','AÐIRMAN','1995-12-01','Erkek','Trabzon','05314583536')
+
+INSERT INTO PERSON Values (59,'Cenk','KÝBAR','1994-10-09','Erkek','Giresun','05326658583')
+INSERT INTO STUDENT Values (33,59,'Cenk','KÝBAR','1994-10-09','Erkek','Giresun','05326658583')
+INSERT INTO UNDERGRADUATE Values (33,59,30,1,1,2013,'Cenk','KÝBAR','1994-10-09','Erkek','Giresun','05326658583')
+
+INSERT INTO PERSON Values (60,'Aycan','YARDIM','1995-09-15','Kadýn','Çorum','05553313531')
+INSERT INTO STUDENT Values (34,60,'Aycan','YARDIM','1995-09-15','Kadýn','Çorum','05553313531')
+INSERT INTO UNDERGRADUATE Values (34,60,30,1,1,2014,'Aycan','YARDIM','1995-09-15','Kadýn','Çorum','05553313531')
+
+INSERT INTO PERSON Values (61,'Didem','DELEN','1996-05-19','Kadýn','Antalya','05361243536')
+INSERT INTO STUDENT Values (35,61,'Didem','DELEN','1996-05-19','Kadýn','Antalya','05361243536')
+INSERT INTO UNDERGRADUATE Values (35,61,30,1,1,2015,'Didem','DELEN','1996-05-19','Kadýn','Antalya','05361243536')
+
+INSERT INTO PERSON Values (62,'Turgay','ÞEN','1995-10-10','Erkek','Muþ','05346589999')
+INSERT INTO STUDENT Values (36,62,'Turgay','ÞEN','1995-10-10','Erkek','Muþ','05346589999')
+INSERT INTO UNDERGRADUATE Values (36,62,30,1,1,2013,'Turgay','ÞEN','1995-10-10','Erkek','Muþ','05346589999')
+
+INSERT INTO PERSON Values (63,'Onur','YÜKSEL','1994-08-11','Erkek','Karabük','05346879898')
+INSERT INTO STUDENT Values (37,63,'Onur','YÜKSEL','1994-08-11','Erkek','Karabük','05346879898')
+INSERT INTO UNDERGRADUATE Values (37,63,30,1,1,2013,'Onur','YÜKSEL','1994-08-11','Erkek','Karabük','05346879898')
+
+INSERT INTO PERSON Values (64,'Sibel','TURAN','1996-10-21','Erkek','Ankara','05339393773')
+INSERT INTO STUDENT Values (38,64,'Sibel','TURAN','1996-10-21','Erkek','Ankara','05339393773')
+INSERT INTO UNDERGRADUATE Values (38,64,30,1,1,2015,'Sibel','TURAN','1996-10-21','Erkek','Ankara','05339393773')
+
+INSERT INTO PERSON Values (65,'Alperen','ÇAVUÞ','1995-06-18','Erkek','Çankýrý','05396778581')
+INSERT INTO STUDENT Values (39,65,'Alperen','ÇAVUÞ','1995-06-18','Erkek','Çankýrý','05396778581')
+INSERT INTO UNDERGRADUATE Values (39,65,30,1,1,2015,'Alperen','ÇAVUÞ','1995-06-18','Erkek','Çankýrý','05396778581')
+
+INSERT INTO PERSON Values (66,'Gamze','TAÞGIN','1994-11-07','Kadýn','Erzincan','05369807025')
+INSERT INTO STUDENT Values (40,66,'Gamze','TAÞGIN','1994-11-07','Kadýn','Erzincan','05369807025')
+INSERT INTO UNDERGRADUATE Values (40,66,30,1,1,2013,'Gamze','TAÞGIN','1994-11-07','Kadýn','Erzincan','05369807025')
+
+INSERT INTO PERSON Values (67,'Rýfat','TERZÝ','1996-10-16','Erkek','Samsun','05349806080')
+INSERT INTO STUDENT Values (41,67,'Rýfat','TERZÝ','1996-10-16','Erkek','Samsun','05349806080')
+INSERT INTO UNDERGRADUATE Values (41,67,30,1,1,2014,'Rýfat','TERZÝ','1996-10-16','Erkek','Samsun','05349806080')
+
+INSERT INTO PERSON Values (68,'Dilara','AYDIN','1995-11-21','Kadýn','Kütahya','05075558989')
+INSERT INTO STUDENT Values (10,68,'Dilara','AYDIN','1995-11-21','Kadýn','Kütahya','05075558989')
+INSERT INTO UNDERGRADUATE Values (10,68,30,1,1,2013,'Dilara','AYDIN','1995-11-21','Kadýn','Kütahya','05075558989')
+
+/* ****  GRADUATE INPUTS (studentID,personID int, avarage float,gradeDate date,name nvarchar(30),surname nvarchar(30),birthday date,sex nvarchar(5),adress nvarchar(100) ,telefon nvarchar(11)) ***/
+
+INSERT INTO PERSON Values (69,'Muzaffer','AKPINAR','1990-09-11','Erkek','Trabzon','05449597875')
+INSERT INTO STUDENT Values (42,69,'Muzaffer','AKPINAR','1990-09-11','Erkek','Trabzon','05449597875')
+INSERT INTO GRADUATE Values (42,69,2.90,2015,'Muzaffer','AKPINAR','1990-09-11','Erkek','Trabzon','05449597875')
+
+INSERT INTO PERSON Values (70,'Fatih','ÇALIÞKAN','1989-08-13','Erkek','Ardahan','05369633356')
+INSERT INTO STUDENT Values (43,70,'Fatih','ÇALIÞKAN','1989-08-13','Erkek','Ardahan','05369633356')
+INSERT INTO GRADUATE Values (43,70,3.40,2014,'Fatih','ÇALIÞKAN','1989-08-13','Erkek','Ardahan','05369633356')
+
+INSERT INTO PERSON Values (71,'Yasemin','ÖMÜR','1987-01-15','Kadýn','Muþ','05334226010')
+INSERT INTO STUDENT Values (44,71,'Yasemin','ÖMÜR','1987-01-15','Kadýn','Muþ','05334226010')
+INSERT INTO GRADUATE Values (44,71,3.00,2010,'Yasemin','ÖMÜR','1987-01-15','Kadýn','Muþ','05334226010')
+
+INSERT INTO PERSON Values (72,'Aras','BULUT','1989-12-20','Erkek','Yozgat','05056502020')
+INSERT INTO STUDENT Values (45,72,'Aras','BULUT','1989-12-20','Erkek','Yozgat','05056502020')
+INSERT INTO GRADUATE Values (45,72,2.15,2015,'Aras','BULUT','1989-12-20','Erkek','Yozgat','05056502020')
+
+INSERT INTO PERSON Values (73,'Berrin','GÜNEÞ','1991-09-15','Kadýn','Ýzmir','05066603070')
+INSERT INTO STUDENT Values (46,73,'Berrin','GÜNEÞ','1991-09-15','Kadýn','Ýzmir','05066603070')
+INSERT INTO GRADUATE Values (46,73,2.89,2014,'Berrin','GÜNEÞ','1991-09-15','Kadýn','Ýzmir','05066603070')
+
+INSERT INTO PERSON Values (74,'Kardelen','GÜL','1993-10-01','Kadýn','Aydýn','05369704805')
+INSERT INTO STUDENT Values (47,74,'Kardelen','GÜL','1993-10-01','Kadýn','Aydýn','05369704805')
+INSERT INTO GRADUATE Values (47,74,2.70,2016,'Kardelen','GÜL','1993-10-01','Kadýn','Aydýn','05369704805')
+
+INSERT INTO PERSON Values (75,'Leyla','ABDAL','1987-11-11','Kadýn','Kýrýkkale','05347893636')
+INSERT INTO STUDENT Values (48,75,'Leyla','ABDAL','1987-11-11','Kadýn','Kýrýkkale','05347893636')
+INSERT INTO GRADUATE Values (48,75,1.89,2010,'Leyla','ABDAL','1987-11-11','Kadýn','Kýrýkkale','05347893636')
+
+INSERT INTO PERSON Values (76,'Murat','DAL','1990-08-22','Erkek','Antalya','05378809090')
+INSERT INTO STUDENT Values (49,76,'Murat','DAL','1990-08-22','Erkek','Antalya','05378809090')
+INSERT INTO GRADUATE Values (49,76,2.99,2005,'Murat','DAL','1990-08-22','Erkek','Antalya','05378809090')
+
+INSERT INTO PERSON Values (77,'Evren','KILSIZ','1992-08-08','Erkek','Aðrý','05057809970')
+INSERT INTO STUDENT Values (50,77,'Evren','KILSIZ','1992-08-08','Erkek','Aðrý','05057809970')
+INSERT INTO GRADUATE Values (50,77,3.50,2015,'Evren','KILSIZ','1992-08-08','Erkek','Aðrý','05057809970')
+
+INSERT INTO PERSON Values (78,'Þeyma','YILMAZ','1989-12-10','Kadýn','Manisa','05345506780')
+INSERT INTO STUDENT Values (51,78,'Þeyma','YILMAZ','1989-12-10','Kadýn','Manisa','05345506780')
+INSERT INTO GRADUATE Values (51,78,3.01,2014,'Þeyma','YILMAZ','1989-12-10','Kadýn','Manisa','05345506780')
+
+INSERT INTO PERSON Values (79,'Kasým','YILDIRIM','1985-05-17','Erkek','Tekirdað','05369903031')
+INSERT INTO STUDENT Values (52,79,'Kasým','YILDIRIM','1985-05-17','Erkek','Tekirdað','05369903031')
+INSERT INTO GRADUATE Values (52,79,2.77,2009,'Kasým','YILDIRIM','1985-05-17','Erkek','Tekirdað','05369903031')
+
+INSERT INTO PERSON Values (80,'Yonca','LODÝ','1989-09-19','Kadýn','Ýstanbul','05368809795')
+INSERT INTO STUDENT Values (53,80,'Yonca','LODÝ','1989-09-19','Kadýn','Ýstanbul','05368809795')
+INSERT INTO GRADUATE Values (53,80,2.87,2013,'Yonca','LODÝ','1989-09-19','Kadýn','Ýstanbul','05368809795')
+
+INSERT INTO PERSON Values (81,'Veli','TATSIZ','1985-09-21','Erkek','Malatya','05366668080')
+INSERT INTO STUDENT Values (54,81,'Veli','TATSIZ','1985-09-21','Erkek','Malatya','05366668080')
+INSERT INTO GRADUATE Values (54,81,1.80,2016,'Veli','TATSIZ','1985-09-21','Erkek','Malatya','05366668080')
+
+INSERT INTO PERSON Values (82,'Volkan','KÝRAZ','1987-01-11','Erkek','Bursa','05321598086')
+INSERT INTO STUDENT Values (55,82,'Volkan','KÝRAZ','1987-01-11','Erkek','Bursa','05321598086')
+INSERT INTO GRADUATE Values (55,82,2.52,2010,'Volkan','KÝRAZ','1987-01-11','Erkek','Bursa','05321598086')
+
+INSERT INTO PERSON Values (83,'Sýla','GENCOÐLU','1985-01-14','Kadýn','Ýzmir','05347885050')
+INSERT INTO STUDENT Values (56,83,'Sýla','GENCOÐLU','1985-01-14','Kadýn','Ýzmir','05347885050')
+INSERT INTO GRADUATE Values (56,83,3.50,2010,'Sýla','GENCOÐLU','1985-01-14','Kadýn','Ýzmir','05347885050')
+
+
+
+/****************************************************************************/
+/************** BOLUMLER INPUTS***********************************************/
+/****************************************************************************/
+
+/** ACADEMIC_UNIT INPUTS (unýtID,deanID,name,location)***/
+
+INSERT INTO ACADEMIC_UNIT Values (1,4,'MÜHENDÝSLÝK FAKÜLTESÝ','Bornova')
+INSERT INTO ACADEMIC_UNIT Values (2,16,'DÝÞ HEKÝMLÝÐÝ FAKÜLTESÝ','Bornova')
+INSERT INTO ACADEMIC_UNIT Values (3,23,'EGE MESLEK YÜKSEKOKULU','Buca')
+INSERT INTO ACADEMIC_UNIT Values (4,26,'ARAÞTIRMA VE GELÝÞTÝRME MERKEZÝ','Bornova')
+INSERT INTO ACADEMIC_UNIT Values (5,14,'FEN BÝLÝMLERÝ ENSTÝTÜSÜ','Bornova')
+
+
+
+/*** DEPARTMENT INPUTS  (deptID, unýtID, name(50))*/
+
+INSERT INTO DEPARTMENT Values (1,1,'Bilgisayar Mühendisliði')
+INSERT INTO DEPARTMENT Values (2,1,'Gýda Mühendisliði')
+INSERT INTO DEPARTMENT Values (3,2,'Aðýz, Diþ ve Çene Cerrahisi Anabilim Dalý')
+INSERT INTO DEPARTMENT Values (4,3,'Bilgisayar Programcýlýgý')
+INSERT INTO DEPARTMENT Values (5,3,'ELEKTRIK')
+INSERT INTO DEPARTMENT Values (6,4,'Bilgi ve Ýletiþim Teknolojileri Uygulama ve Araþtýrma Merkezi')
+INSERT INTO DEPARTMENT Values (7,4,'Çevre Sorunlarý Uygulama ve Araþtýrma Merkezi')
+INSERT INTO DEPARTMENT Values (8,4,'Gözlemevi Uygulama ve Araþtýrma Merkezi')
+INSERT INTO DEPARTMENT Values (9,5,'KÝMYA')
+INSERT INTO DEPARTMENT Values (10,5,'BÝTKÝ KORUMA')
+
+
+
+
+
+/****************************************************************************/
+/**************COURSE INPUTS***********************************************/
+/****************************************************************************/
+
+/** BilMuh **/
+INSERT INTO COURSE VALUES (1,'ALGORÝTMA VE PROGRAMLAMA','Fall',3,2,7) /* Yard. Doc. Dr. Özgür GÜMÜÞ */ 
+INSERT INTO COURSE VALUES (2,'MATEMATÝK-I','Fall',3,2,6) /* Doc. Dr.Vecdi AYTAC  - Sema BODUR, Arþ.Gör.*/ 
+INSERT INTO COURSE VALUES (3,'ÜNÝVERSÝTE YAÞAMINA GEÇÝÞ','Fall',1,0,1)/* Yard. Doc. Dr.  Ahmet EGESOY */ 
+INSERT INTO COURSE VALUES (4,'BÝLGÝSAYAR AÐLARI','Fall',3,0,4) /* Prof. Dr. Levent TOKER */ 
+INSERT INTO COURSE VALUES (5,'DATABASE MANAGEMENT','Fall',3,2,6) /* Doc. Dr. Murat Osman ÜNALIR */
+INSERT INTO COURSE VALUES (6,'MÝKROÝÞLEMCÝLER','Fall',3,1,5) /* Yrd.Doç.Dr. Þebnem BORA */  
+
+INSERT INTO COURSE VALUES (7,'AYRIK YAPILAR','Spring',3,2,7)  /* Doc. Dr.Vecdi AYTAC */  
+INSERT INTO COURSE VALUES (8,'OLASILIK VE ISTATISTIK','Spring',3,2,6) /* Prof.Dr. Serdar KORUKOÐLU, */
+INSERT INTO COURSE VALUES (9,'MATEMATÝK-II','Spring',3,2,6) /* Doc. Dr.Vecdi AYTAC  - Sema BODUR, Arþ.Gör.*/ 
+INSERT INTO COURSE VALUES (10,'DIGITAL ELECTRONICS','Spring',3,3,7)  /* Yrd.Doç.Dr. Þebnem BORA */  
+INSERT INTO COURSE VALUES (11,'AUTOMATA THEORY','Spring',3,0,3) /* Rýza Cenk ERDUR, Doç.Dr.*/
+INSERT INTO COURSE VALUES (12,'COMPUTER ARCHITECTURE','Spring',3,0,5) /* Özgü CAN, Yrd.Doç.Dr. */
+
+
+/** Gýda Muh **/
+
+
+INSERT INTO COURSE VALUES (13,'GIDA KÝMYASI I','Fall',2,0,4) /* Prof. Dr. Semih ÖTLEÞ */
+INSERT INTO COURSE VALUES (14,'GENEL KÝMYA','Fall',3,0,4) /* Doç Dr. Özgül Özdestan Ocak*/
+INSERT INTO COURSE VALUES (15,'BESLENME','Fall',2,0,3) /* Prof. Dr. Sedef Nehri EL*/
+
+INSERT INTO COURSE VALUES (19,'GIDA KÝMYASI II','Spring',2,0,4) /* Prof. Dr. Semih ÖTLEÞ  - Doç Dr. Özgül Özdestan Ocak*/
+INSERT INTO COURSE VALUES (20,'COMPUTER PROGRAMMING','Spring',2,2,4) /* Assoc. Prof. Dr. Yavuz Özçelik */ 
+INSERT INTO COURSE VALUES (21,'GIDA BIYOKÝMYASI','Spring',2,0,4) /* Prof. Dr. Sibel KARAKAYA */ 
+
+
+/* DÝÞ HEKÝMLÝÐÝ FAKÜLTESÝ */ 
+
+/**Aðýz, Diþ ve Çene Cerrahisi Anabilim Dalý**/
+
+INSERT INTO COURSE VALUES (22,'BÝYOFÝZÝK','Fall',4,3,7) /* Prof. Dr.Recep ÇELÝK */
+INSERT INTO COURSE VALUES (23,'ANATOMÝ','Fall',5,2,4) /* Doç Dr. Salim TOKAN*/
+INSERT INTO COURSE VALUES (24,'PROTEZ ','Fall',3,2,4) /* Prof. Dr. Emre BAÞIKARA*/
+
+INSERT INTO COURSE VALUES (25,'FÝZYOLOJÝ','Spring',3,1,3) /* Prof. Dr. Tevfik YAZICI */
+INSERT INTO COURSE VALUES (26,'ENDODONT','Spring',4,1,4) /* Assoc. Prof. Dr. Toygar SOLAK*/ 
+INSERT INTO COURSE VALUES (27,'IMPLANTOLOJI','Spring',5,4,7) /* Prof. Dr. Mahmut UZUN */ 
+
+
+/******** EGE MESLEK YUKSEKOKULU *******/
+/* Bilgisayar Programcýlýgý */ 
+
+INSERT INTO COURSE VALUES (28,'PROGRAMLAMA TEMELLERÝ','Fall',3,1,6) /* Rýdvan ÞEN*/
+INSERT INTO COURSE VALUES (29,'YAZILIM KURULUMU VE YÖNETÝMÝ','Fall',1,1,5) /* Yrd. Doc. Dr. Coþkun HARMANÞAH */
+INSERT INTO COURSE VALUES (30,'AÐ TEMELLERI','Fall',3,0,3) /* Prof.Dr. Levent Toker */
+
+INSERT INTO COURSE VALUES (31,'GRAFÝK ANÝMASYON-I','Spring',2,1,3) /* Öðr. Gör. Ayhan UÐUR */
+INSERT INTO COURSE VALUES (32,'BÝLGÝSAYAR DONANIM','Spring',1,1,5) /* Assist. Prof. Dr. Coþkun HARMANÞAH */ 
+INSERT INTO COURSE VALUES (33,'SÝSTEM ANALÝZÝ VE TASARIMI','Spring',2,3,5) /* Yrd. Doc. Dr. Coþkun HARMANÞAH, Öðr. Gör. Rýdvan ÞEN */ 
+
+
+/* ELEKTRIK */ 
+
+INSERT INTO COURSE VALUES (34,'ÖLÇME TEKNÝÐÝ','Fall',3,1,4) /* Öðr. Gör. Ali Varsýn KEMAHLIOÐLU */
+INSERT INTO COURSE VALUES (35,'BÝLGÝ VE ÝLETÝÞÝM TEKNOLOJÝSÝ','Fall',2,1,4) /* Öðr. Gör. Ali Varsýn KEMAHLIOÐLU */
+INSERT INTO COURSE VALUES (36,'GÜÇ ELEKTRONÝÐÝ-I','Fall',2,1,3) /* Asst.Prof. M. Necdet YILDIZ */
+
+INSERT INTO COURSE VALUES (37,'BÝLGÝSAYAR DESTEKLÝ TASARIM','Spring',1,1,2) /* Öðr. Gör. Ali Varsýn KEMAHLIOÐLU */
+INSERT INTO COURSE VALUES (38,'ÖZEL TESÝSATLAR','Spring',2,1,2) /* Öðr. Gör. Ali Varsýn KEMAHLIOÐLU */ 
+INSERT INTO COURSE VALUES (39,'SARIM TEKNÝÐÝ','Spring',3,1,4) /* Öðr. Gör. Mehmet DEDE*/ 
+ 
+
+/****** ARAÞTIRMA- GELÝÞTÝRME MERKEZLERÝ ***/
+	/*Bilgi ve Ýletiþim Teknolojileri Uygulama ve Araþtýrma Merkezi
+	Çevre Sorunlarý Uygulama ve Araþtýrma Merkezi
+	Gözlemevi Uygulama ve Araþtýrma Merkezi*/
+
+/***** GRADUATE SCHOOOL *****/
+/** FEN BÝLÝMLERÝ ENSTÝTÜSÜ ****/
+	/* KÝMYA ***/
+	INSERT INTO COURSE VALUES (40,'ORGANÝK KÝMYA','Fall',3,1,4) /* */ 
+	INSERT INTO COURSE VALUES (41,'ANALÝTÝK KÝMYA','Fall',5,4,7) 
+	INSERT INTO COURSE VALUES (42,'ANORGANÝK KÝMYA','Fall',4,2,5) 
+
+	/* BÝTKÝ KORUMA **/ 
+	INSERT INTO COURSE VALUES (43,'FITOPATALOJI','Fall',3,1,4) /* */ 
+	INSERT INTO COURSE VALUES (44,'ENTOMOLOJI','Fall',4,3,6) 
+
+
+
+
+/*********** COMPANY ***************************/
+INSERT INTO COMPANY VALUES (1,'KOÇ HOLNÝG' ,'1925-05-31')
+INSERT INTO COMPANY VALUES (2,'GARANTÝ TEKNOLOJÝ' ,'1995-04-10')
+INSERT INTO COMPANY VALUES (3,'ÇELÝK GIDA PAZARI' ,'1995-08-20')
+INSERT INTO COMPANY VALUES (4,'TURKCELL' ,'1994-02-28')
+INSERT INTO COMPANY VALUES (5,'TÜRKÝYE ÝÞ BANKASI' ,'1924-05-19')
+INSERT INTO COMPANY VALUES (6,'TÜRK TELEKOM' ,'1994-04-24')
+INSERT INTO COMPANY VALUES (7,'ERICSSON' ,'1876-01-20')
+INSERT INTO COMPANY VALUES (8,'SAMSUNG' ,'1938-03-01')
+INSERT INTO COMPANY VALUES (9,'IBM' ,'1911-06-16')
+INSERT INTO COMPANY VALUES (10,'VESTEL' ,'1984-02-10')
+
+/****************** LINKED_MEMBERS *****************/
+INSERT INTO LINKEDIN_MEMBERS (companyID,memName,mailAdress) values(1,'KOÇ HOLNÝG','info@koc.com.tr')
+INSERT INTO LINKEDIN_MEMBERS (companyID,memName,mailAdress) values(2,'GARANTÝ TEKNOLOJÝ','info@garantiteknoloji.com.tr')
+INSERT INTO LINKEDIN_MEMBERS (companyID,memName,mailAdress) values(3,'ÇELÝK GIDA PAZARI','info@celikgida.com.tr')
+INSERT INTO LINKEDIN_MEMBERS (companyID,memName,mailAdress) values(4,'TURKCELL','info@turkcell.com.tr')
+INSERT INTO LINKEDIN_MEMBERS (companyID,memName,mailAdress) values(6,'TÜRK TELEKOM','info@turktelekom.com.tr')
+INSERT INTO LINKEDIN_MEMBERS (companyID,memName,mailAdress) values(7,'ERICSSON','info@ericsson.com.tr')
+INSERT INTO LINKEDIN_MEMBERS (companyID,memName,mailAdress) values(8,'SAMSUNG','info@samsung.com.tr')
+INSERT INTO LINKEDIN_MEMBERS (companyID,memName,mailAdress) values(9,'IBM','info@ibm.com.tr')
+INSERT INTO LINKEDIN_MEMBERS (companyID,memName,mailAdress) values(10,'VESTEL','info@vestel.com.tr')
+
+/****************** ADVERT ****************/
+INSERT INTO ADVERT (description,memberID) VALUES ('.NET Yazýlým Uzmaný',42)
+INSERT INTO ADVERT (description,memberID) VALUES ('Kasiyer',43)
+INSERT INTO ADVERT (description,memberID) VALUES ('Að Uzmaný',48)
+INSERT INTO ADVERT (description,memberID) VALUES ('Ýþ Analisti',44)
+INSERT INTO ADVERT (description,memberID) VALUES ('FRONTEND DEVELOPER',42)
+INSERT INTO ADVERT (description,memberID) VALUES ('Yazýlým Mühendisi',49)
+INSERT INTO ADVERT (description,memberID) VALUES ('Proje Yöneticisi',46)
+
+
+
+/****************************************************************************/
+/************** ÝLÝÞKÝ INPUTS***********************************************/
+/****************************************************************************/
+
+/**************** TEACHS_ON (profID,courseID) ********************/
+
+INSERT INTO TEACHS_ON Values (1,1)
+INSERT INTO TEACHS_ON Values (7,2)
+INSERT INTO TEACHS_ON Values (2,2)
+INSERT INTO TEACHS_ON Values (3,3)
+INSERT INTO TEACHS_ON Values (4,4)
+INSERT INTO TEACHS_ON Values (5,5)
+INSERT INTO TEACHS_ON Values (6,6)
+INSERT INTO TEACHS_ON Values (7,7)
+INSERT INTO TEACHS_ON Values (8,8)
+INSERT INTO TEACHS_ON Values (7,9)
+INSERT INTO TEACHS_ON Values (2,9)
+INSERT INTO TEACHS_ON Values (6,10)
+INSERT INTO TEACHS_ON Values (9,11)
+INSERT INTO TEACHS_ON Values (10,12)
+INSERT INTO TEACHS_ON Values (11,13)
+INSERT INTO TEACHS_ON Values (12,14)
+INSERT INTO TEACHS_ON Values (13,15)
+INSERT INTO TEACHS_ON Values (11,19)
+INSERT INTO TEACHS_ON Values (14,20)
+INSERT INTO TEACHS_ON Values (15,21)
+INSERT INTO TEACHS_ON Values (16,22)
+INSERT INTO TEACHS_ON Values (17,23)
+INSERT INTO TEACHS_ON Values (18,24)
+INSERT INTO TEACHS_ON Values (19,25)
+INSERT INTO TEACHS_ON Values (20,26)
+INSERT INTO TEACHS_ON Values (21,27)
+INSERT INTO TEACHS_ON Values (22,28)
+INSERT INTO TEACHS_ON Values (23,29)
+INSERT INTO TEACHS_ON Values (4,30)
+INSERT INTO TEACHS_ON Values (24,31)
+INSERT INTO TEACHS_ON Values (23,32)
+INSERT INTO TEACHS_ON Values (22,33)
+INSERT INTO TEACHS_ON Values (23,33)
+INSERT INTO TEACHS_ON Values (25,34)
+INSERT INTO TEACHS_ON Values (25,35)
+INSERT INTO TEACHS_ON Values (26,36)
+INSERT INTO TEACHS_ON Values (25,37)
+INSERT INTO TEACHS_ON Values (25,38)
+INSERT INTO TEACHS_ON Values (27,39)
+
+
+
+/**************** REGISTRATION (studentID,deptID) ********************/
+
+INSERT INTO REGISTRATION Values(1,1)
+INSERT INTO REGISTRATION Values(2,1)
+INSERT INTO REGISTRATION Values(3,1)
+INSERT INTO REGISTRATION Values(4,1)
+INSERT INTO REGISTRATION Values(5,1)
+INSERT INTO REGISTRATION Values(6,1)
+INSERT INTO REGISTRATION Values(7,1)
+INSERT INTO REGISTRATION Values(8,1)
+INSERT INTO REGISTRATION Values(9,1)
+INSERT INTO REGISTRATION Values(10,1)
+INSERT INTO REGISTRATION Values(11,1)
+INSERT INTO REGISTRATION Values(12,2)
+INSERT INTO REGISTRATION Values(13,2)
+INSERT INTO REGISTRATION Values(14,2)
+INSERT INTO REGISTRATION Values(15,2)
+INSERT INTO REGISTRATION Values(16,2)
+INSERT INTO REGISTRATION Values(17,2)
+INSERT INTO REGISTRATION Values(18,2)
+INSERT INTO REGISTRATION Values(19,2)
+INSERT INTO REGISTRATION Values(20,2)
+INSERT INTO REGISTRATION Values(21,2)
+INSERT INTO REGISTRATION Values(22,3)
+INSERT INTO REGISTRATION Values(23,3)
+INSERT INTO REGISTRATION Values(24,3)
+INSERT INTO REGISTRATION Values(25,3)
+INSERT INTO REGISTRATION Values(26,3)
+INSERT INTO REGISTRATION Values(27,3)
+INSERT INTO REGISTRATION Values(28,3)
+INSERT INTO REGISTRATION Values(29,4)
+INSERT INTO REGISTRATION Values(30,4)
+INSERT INTO REGISTRATION Values(31,4)
+INSERT INTO REGISTRATION Values(32,4)
+INSERT INTO REGISTRATION Values(33,4)
+INSERT INTO REGISTRATION Values(34,4)
+INSERT INTO REGISTRATION Values(35,4)
+INSERT INTO REGISTRATION Values(36,4)
+INSERT INTO REGISTRATION Values(37,5)
+INSERT INTO REGISTRATION Values(38,5)
+INSERT INTO REGISTRATION Values(39,5)
+INSERT INTO REGISTRATION Values(40,5)
+INSERT INTO REGISTRATION Values(41,5)
+
+INSERT INTO REGISTRATION Values(42,1)
+INSERT INTO REGISTRATION Values(43,1)
+INSERT INTO REGISTRATION Values(44,1)
+INSERT INTO REGISTRATION Values(45,1)
+INSERT INTO REGISTRATION Values(46,1)
+INSERT INTO REGISTRATION Values(47,2)
+INSERT INTO REGISTRATION Values(48,2)
+INSERT INTO REGISTRATION Values(49,2)
+INSERT INTO REGISTRATION Values(50,3)
+INSERT INTO REGISTRATION Values(51,3)
+INSERT INTO REGISTRATION Values(52,3)
+INSERT INTO REGISTRATION Values(53,4)
+INSERT INTO REGISTRATION Values(54,4)
+INSERT INTO REGISTRATION Values(55,5)
+INSERT INTO REGISTRATION Values(56,5)
+
+
+/**************** HAS (courseID,deptID) ********************/
+INSERT INTO HAS Values(1,1)
+INSERT INTO HAS Values(2,1)
+INSERT INTO HAS Values(3,1)
+INSERT INTO HAS Values(4,1)
+INSERT INTO HAS Values(5,1)
+INSERT INTO HAS Values(6,1)
+INSERT INTO HAS Values(7,1)
+INSERT INTO HAS Values(8,1)
+INSERT INTO HAS Values(9,1)
+INSERT INTO HAS Values(10,1)
+INSERT INTO HAS Values(11,1)
+INSERT INTO HAS Values(12,1)
+INSERT INTO HAS Values(13,2)
+INSERT INTO HAS Values(14,2)
+INSERT INTO HAS Values(15,2)
+INSERT INTO HAS Values(19,2)
+INSERT INTO HAS Values(20,2)
+INSERT INTO HAS Values(21,2)
+INSERT INTO HAS Values(22,3)
+INSERT INTO HAS Values(23,3)
+INSERT INTO HAS Values(24,3)
+INSERT INTO HAS Values(25,3)
+INSERT INTO HAS Values(26,3)
+INSERT INTO HAS Values(27,3)
+INSERT INTO HAS Values(28,4)
+INSERT INTO HAS Values(29,4)
+INSERT INTO HAS Values(30,4)
+INSERT INTO HAS Values(31,4)
+INSERT INTO HAS Values(32,4)
+INSERT INTO HAS Values(33,4)
+INSERT INTO HAS Values(34,5)
+INSERT INTO HAS Values(35,5)
+INSERT INTO HAS Values(36,5)
+INSERT INTO HAS Values(37,5)
+INSERT INTO HAS Values(38,5)
+INSERT INTO HAS Values(39,5)
+INSERT INTO HAS Values(40,9)
+INSERT INTO HAS Values(41,9)
+INSERT INTO HAS Values(42,9)
+INSERT INTO HAS Values(43,10)
+INSERT INTO HAS Values(44,10)
+
+
+
+/**************** WORKS_ON (profID,deptID,begýnDate) ********************/
+INSERT INTO WORKS_ON Values(1,1,'2005-09-15')
+INSERT INTO WORKS_ON Values(2,1,'2010-09-24')
+INSERT INTO WORKS_ON Values(3,1,'2003-02-20')
+INSERT INTO WORKS_ON Values(4,1,'1985-09-12')
+INSERT INTO WORKS_ON Values(4,4,'1995-09-12')
+INSERT INTO WORKS_ON Values(5,1,'1990-10-15')
+INSERT INTO WORKS_ON Values(6,1,'2001-09-17')
+INSERT INTO WORKS_ON Values(7,1,'1999-06-19')
+INSERT INTO WORKS_ON Values(8,1,'1987-09-05')
+INSERT INTO WORKS_ON Values(9,1,'1990-09-22')
+INSERT INTO WORKS_ON Values(10,1,'2003-10-15')
+INSERT INTO WORKS_ON Values(11,2,'1995-09-15')
+INSERT INTO WORKS_ON Values(12,2,'2000-09-27')
+INSERT INTO WORKS_ON Values(13,2,'2001-08-08')
+INSERT INTO WORKS_ON Values(14,2,'1996-09-20')
+INSERT INTO WORKS_ON Values(15,2,'2000-08-14')
+INSERT INTO WORKS_ON Values(16,3,'1993-10-09')
+INSERT INTO WORKS_ON Values(17,3,'2000-08-11')
+INSERT INTO WORKS_ON Values(18,3,'2004-09-22')
+INSERT INTO WORKS_ON Values(19,3,'1986-08-28')
+INSERT INTO WORKS_ON Values(20,3,'2005-09-11')
+INSERT INTO WORKS_ON Values(21,3,'2006-02-19')
+INSERT INTO WORKS_ON Values(22,4,'2007-09-17')
+INSERT INTO WORKS_ON Values(23,4,'2005-08-30')
+INSERT INTO WORKS_ON Values(24,4,'2008-09-15')
+INSERT INTO WORKS_ON Values(25,5,'2000-02-15')
+INSERT INTO WORKS_ON Values(26,5,'1999-08-29')
+INSERT INTO WORKS_ON Values(27,5,'2005-09-25')
+
+
+
+/**************** ENROLL (studentID,courseID) ********************/
+
+INSERT INTO ENROLL Values(1,1,2014)
+INSERT INTO ENROLL Values(1,2,2014)
+INSERT INTO ENROLL Values(1,3,2014)
+INSERT INTO ENROLL Values(1,4,2015)
+INSERT INTO ENROLL Values(1,5,2015)
+INSERT INTO ENROLL Values(1,6,2015)
+
+INSERT INTO ENROLL Values(2,7,2014)
+INSERT INTO ENROLL Values(2,8,2014)
+INSERT INTO ENROLL Values(2,9,2015)
+INSERT INTO ENROLL Values(2,10,2015)
+INSERT INTO ENROLL Values(2,11,2015)
+INSERT INTO ENROLL Values(2,12,2015)
+
+INSERT INTO ENROLL Values(3,1,2013)
+INSERT INTO ENROLL Values(3,3,2013)
+INSERT INTO ENROLL Values(3,5,2013)
+INSERT INTO ENROLL Values(3,2,2014)
+INSERT INTO ENROLL Values(3,6,2014)
+
+INSERT INTO ENROLL Values(4,4,2012)
+INSERT INTO ENROLL Values(4,5,2013)
+INSERT INTO ENROLL Values(4,6,2014)
+
+INSERT INTO ENROLL Values(5,7,2016)
+INSERT INTO ENROLL Values(5,8,2016)
+INSERT INTO ENROLL Values(5,10,2016)
+INSERT INTO ENROLL Values(5,11,2016)
+INSERT INTO ENROLL Values(5,12,2016)
+
+INSERT INTO ENROLL Values(6,9,2015)
+INSERT INTO ENROLL Values(6,10,2016)
+
+INSERT INTO ENROLL Values(7,1,2014)
+INSERT INTO ENROLL Values(7,2,2014)
+INSERT INTO ENROLL Values(7,3,2014)
+INSERT INTO ENROLL Values(7,4,2015)
+INSERT INTO ENROLL Values(7,5,2016)
+INSERT INTO ENROLL Values(7,6,2016)
+
+
+INSERT INTO ENROLL Values(8,3,2014)
+INSERT INTO ENROLL Values(8,4,2014)
+INSERT INTO ENROLL Values(8,5,2014)
+INSERT INTO ENROLL Values(8,6,2015)
+INSERT INTO ENROLL Values(8,7,2015)
+
+INSERT INTO ENROLL Values(9,7,2014)
+INSERT INTO ENROLL Values(9,8,2014)
+INSERT INTO ENROLL Values(9,9,2015)
+INSERT INTO ENROLL Values(9,10,2015)
+INSERT INTO ENROLL Values(9,11,2016)
+INSERT INTO ENROLL Values(9,12,2016)
+
+INSERT INTO ENROLL Values(10,4,2013)
+INSERT INTO ENROLL Values(10,5,2013)
+INSERT INTO ENROLL Values(10,6,2013)
+
+INSERT INTO ENROLL Values(11,1,2015)
+INSERT INTO ENROLL Values(11,2,2015)
+INSERT INTO ENROLL Values(11,3,2015)
+INSERT INTO ENROLL Values(11,4,2015)
+INSERT INTO ENROLL Values(11,5,2016)
+INSERT INTO ENROLL Values(11,6,2016)
+
+INSERT INTO ENROLL Values(12,13,2014)
+INSERT INTO ENROLL Values(12,14,2014)
+INSERT INTO ENROLL Values(12,15,2014)
+
+INSERT INTO ENROLL Values(13,19,2013)
+INSERT INTO ENROLL Values(13,20,2014)
+INSERT INTO ENROLL Values(13,21,2014)
+
+INSERT INTO ENROLL Values(14,20,2014)
+INSERT INTO ENROLL Values(14,21,2014)
+
+INSERT INTO ENROLL Values(15,19,2013)
+INSERT INTO ENROLL Values(15,20,2013)
+INSERT INTO ENROLL Values(15,21,2014)
+
+INSERT INTO ENROLL Values(16,19,2014)
+INSERT INTO ENROLL Values(16,21,2015)
+
+INSERT INTO ENROLL Values(17,19,2015)
+INSERT INTO ENROLL Values(17,20,2015)
+INSERT INTO ENROLL Values(17,21,2016)
+
+INSERT INTO ENROLL Values(18,13,2015)
+INSERT INTO ENROLL Values(18,14,2015)
+
+INSERT INTO ENROLL Values(19,21,2016)
+
+INSERT INTO ENROLL Values(20,13,2015)
+INSERT INTO ENROLL Values(20,14,2015)
+INSERT INTO ENROLL Values(20,15,2015)
+
+INSERT INTO ENROLL Values(21,19,2013)
+INSERT INTO ENROLL Values(21,20,2013)
+INSERT INTO ENROLL Values(21,21,2014)
+
+INSERT INTO ENROLL Values(22,22,2013)
+INSERT INTO ENROLL Values(22,23,2013)
+INSERT INTO ENROLL Values(22,24,2014)
+
+INSERT INTO ENROLL Values(23,25,2014)
+INSERT INTO ENROLL Values(23,26,2014)
+INSERT INTO ENROLL Values(23,27,2015)
+
+INSERT INTO ENROLL Values(24,26,2014)
+INSERT INTO ENROLL Values(24,27,2014)
+
+INSERT INTO ENROLL Values(25,25,2013)
+INSERT INTO ENROLL Values(25,26,2014)
+INSERT INTO ENROLL Values(25,27,2015)
+
+INSERT INTO ENROLL Values(26,22,2016)
+INSERT INTO ENROLL Values(26,23,2016)
+INSERT INTO ENROLL Values(26,24,2016)
+
+INSERT INTO ENROLL Values(27,22,2014)
+INSERT INTO ENROLL Values(27,23,2014)
+INSERT INTO ENROLL Values(27,24,2015)
+
+INSERT INTO ENROLL Values(28,28,2014)
+INSERT INTO ENROLL Values(28,29,2014)
+
+INSERT INTO ENROLL Values(29,28,2013)
+INSERT INTO ENROLL Values(29,29,2014)
+INSERT INTO ENROLL Values(29,30,2015)
+
+INSERT INTO ENROLL Values(30,32,2014)
+INSERT INTO ENROLL Values(30,33,2014)
+
+INSERT INTO ENROLL Values(31,31,2014)
+INSERT INTO ENROLL Values(31,32,2014)
+INSERT INTO ENROLL Values(31,33,2015)
+
+INSERT INTO ENROLL Values(32,33,2016)
+
+INSERT INTO ENROLL Values(33,28,2013)
+INSERT INTO ENROLL Values(33,29,2013)
+INSERT INTO ENROLL Values(33,30,2013)
+
+INSERT INTO ENROLL Values(34,37,2014)
+INSERT INTO ENROLL Values(34,38,2015)
+INSERT INTO ENROLL Values(34,39,2015)
+
+INSERT INTO ENROLL Values(35,37,2015)
+INSERT INTO ENROLL Values(35,38,2015)
+INSERT INTO ENROLL Values(35,39,2015)
+
+INSERT INTO ENROLL Values(36,38,2013)
+INSERT INTO ENROLL Values(36,39,2015)
+
+INSERT INTO ENROLL Values(37,34,2013)
+INSERT INTO ENROLL Values(37,35,2014)
+INSERT INTO ENROLL Values(37,37,2015)
+
+INSERT INTO ENROLL Values(38,34,2015)
+INSERT INTO ENROLL Values(38,35,2015)
+INSERT INTO ENROLL Values(38,36,2016)
+
+INSERT INTO ENROLL Values(39,37,2015)
+INSERT INTO ENROLL Values(39,38,2016)
+INSERT INTO ENROLL Values(39,39,2016)
+
+INSERT INTO ENROLL Values(40,34,2013)
+INSERT INTO ENROLL Values(40,35,2015)
+
+INSERT INTO ENROLL Values(41,34,2014)
+INSERT INTO ENROLL Values(41,35,2014)
+INSERT INTO ENROLL Values(41,36,2015)
+
+
+INSERT INTO ENROLL Values(2,12,2016)
+
+INSERT INTO ENROLL Values(9,7,2016)
+
+INSERT INTO ENROLL Values(14,21,2016)
+
+INSERT INTO ENROLL Values(16,19,2016)
+
+INSERT INTO ENROLL Values(21,19,2016)
+INSERT INTO ENROLL Values(21,20,2016)
+
+INSERT INTO ENROLL Values(23,25,2016)
+
+INSERT INTO ENROLL Values(27,22,2016)
+INSERT INTO ENROLL Values(27,23,2016)
+
+INSERT INTO ENROLL Values(31,31,2016)
+
+INSERT INTO ENROLL Values(35,37,2016)
+INSERT INTO ENROLL Values(35,38,2016)
+
+INSERT INTO ENROLL Values(37,34,2016)
+INSERT INTO ENROLL Values(37,35,2016)
+
+INSERT INTO ENROLL Values(41,34,2016)
+
+
+/**************** REGULAR (studentID,pastCourseID) ********************/
+
+INSERT INTO REGULAR Values (1,1)
+INSERT INTO REGULAR Values (1,2)
+INSERT INTO REGULAR Values (1,3)
+INSERT INTO REGULAR Values (1,4)
+INSERT INTO REGULAR Values (1,5)
+INSERT INTO REGULAR Values (1,6)
+
+
+INSERT INTO REGULAR Values (2,7)
+INSERT INTO REGULAR Values (2,8)
+INSERT INTO REGULAR Values (2,9)
+INSERT INTO REGULAR Values (2,10)
+INSERT INTO REGULAR Values (2,11)
+
+INSERT INTO REGULAR Values (3,1)
+INSERT INTO REGULAR Values (3,3)
+INSERT INTO REGULAR Values (3,5)
+INSERT INTO REGULAR Values (3,2)
+INSERT INTO REGULAR Values (3,6)
+
+INSERT INTO REGULAR Values (4,4)
+INSERT INTO REGULAR Values (4,5)
+INSERT INTO REGULAR Values (4,6)
+
+INSERT INTO REGULAR Values (6,9)
+
+INSERT INTO REGULAR Values(7,1)
+INSERT INTO REGULAR Values(7,2)
+INSERT INTO REGULAR Values(7,3)
+INSERT INTO REGULAR Values(7,4)
+
+
+INSERT INTO REGULAR Values(8,3)
+INSERT INTO REGULAR Values(8,4)
+INSERT INTO REGULAR Values(8,5)
+INSERT INTO REGULAR Values(8,6)
+INSERT INTO REGULAR Values(8,7)
+
+INSERT INTO REGULAR Values(9,8)
+INSERT INTO REGULAR Values(9,9)
+INSERT INTO REGULAR Values(9,10)
+
+INSERT INTO REGULAR Values(10,4)
+INSERT INTO REGULAR Values(10,5)
+INSERT INTO REGULAR Values(10,6)
+
+INSERT INTO REGULAR Values(11,1)
+INSERT INTO REGULAR Values(11,2)
+INSERT INTO REGULAR Values(11,3)
+INSERT INTO REGULAR Values(11,4)
+
+
+INSERT INTO REGULAR Values(12,13)
+INSERT INTO REGULAR Values(12,14)
+INSERT INTO REGULAR Values(12,15)
+
+INSERT INTO REGULAR Values(13,19)
+INSERT INTO REGULAR Values(13,20)
+INSERT INTO REGULAR Values(13,21)
+
+INSERT INTO REGULAR Values(14,20)
+
+INSERT INTO REGULAR Values(15,19)
+INSERT INTO REGULAR Values(15,20)
+INSERT INTO REGULAR Values(15,21)
+
+INSERT INTO REGULAR Values(16,21)
+
+
+INSERT INTO REGULAR Values(17,19)
+INSERT INTO REGULAR Values(17,20)
+
+INSERT INTO REGULAR Values(18,13)
+INSERT INTO REGULAR Values(18,14)
+
+
+INSERT INTO REGULAR Values(20,13)
+INSERT INTO REGULAR Values(20,14)
+INSERT INTO REGULAR Values(20,15)
+
+INSERT INTO REGULAR Values(21,21)
+
+INSERT INTO REGULAR Values(22,22)
+INSERT INTO REGULAR Values(22,23)
+INSERT INTO REGULAR Values(22,24)
+
+INSERT INTO REGULAR Values(23,26)
+INSERT INTO REGULAR Values(23,27)
+
+INSERT INTO REGULAR Values(24,26)
+INSERT INTO REGULAR Values(24,27)
+
+INSERT INTO REGULAR Values(25,25)
+INSERT INTO REGULAR Values(25,26)
+INSERT INTO REGULAR Values(25,27)
+
+INSERT INTO REGULAR Values(27,24)
+
+INSERT INTO REGULAR Values(28,28)
+INSERT INTO REGULAR Values(28,29)
+
+INSERT INTO REGULAR Values(29,28)
+INSERT INTO REGULAR Values(29,29)
+INSERT INTO REGULAR Values(29,30)
+
+INSERT INTO REGULAR Values(30,32)
+INSERT INTO REGULAR Values(30,33)
+
+INSERT INTO REGULAR Values(31,32)
+INSERT INTO REGULAR Values(31,33)
+
+INSERT INTO REGULAR Values(33,28)
+INSERT INTO REGULAR Values(33,29)
+INSERT INTO REGULAR Values(33,30)
+
+INSERT INTO REGULAR Values(34,37)
+INSERT INTO REGULAR Values(34,38)
+INSERT INTO REGULAR Values(34,39)
+
+INSERT INTO REGULAR Values(35,39)
+
+INSERT INTO REGULAR Values(36,38)
+INSERT INTO REGULAR Values(36,39)
+
+INSERT INTO REGULAR Values(37,37)
+
+INSERT INTO REGULAR Values(38,34)
+INSERT INTO REGULAR Values(38,35)
+
+INSERT INTO REGULAR Values(39,37)
+
+INSERT INTO REGULAR Values(40,34)
+INSERT INTO REGULAR Values(40,35)
+
+INSERT INTO REGULAR Values(41,35)
+INSERT INTO REGULAR Values(41,36)
+
+/**************** IRREGULAR (studentID,failCourseID) ********************/
+
+INSERT INTO IRREGULAR Values(2,12)
+
+INSERT INTO IRREGULAR Values(9,7)
+
+INSERT INTO IRREGULAR Values(14,21)
+
+INSERT INTO IRREGULAR Values(16,19)
+
+INSERT INTO IRREGULAR Values(21,19)
+INSERT INTO IRREGULAR Values(21,20)
+
+INSERT INTO IRREGULAR Values(23,25)
+
+INSERT INTO IRREGULAR Values(27,22)
+INSERT INTO IRREGULAR Values(27,23)
+
+INSERT INTO IRREGULAR Values(31,31)
+
+INSERT INTO IRREGULAR Values(35,37)
+INSERT INTO IRREGULAR Values(35,38)
+
+INSERT INTO IRREGULAR Values(37,34)
+INSERT INTO IRREGULAR Values(37,35)
+
+INSERT INTO IRREGULAR Values(41,34)
+
+/**************** APPLÝCANT (applicantID,advertID) ********************/
+
+INSERT INTO APPLICANT VALUES (1,1)
+INSERT INTO APPLICANT VALUES (3,1)
+INSERT INTO APPLICANT VALUES (8,1)
+INSERT INTO APPLICANT VALUES (12,1)
+INSERT INTO APPLICANT VALUES (15,1)
+INSERT INTO APPLICANT VALUES (18,1)
+INSERT INTO APPLICANT VALUES (20,1)
+INSERT INTO APPLICANT VALUES (23,1)
+
+INSERT INTO APPLICANT VALUES (2,2)
+INSERT INTO APPLICANT VALUES (4,2)
+INSERT INTO APPLICANT VALUES (5,2)
+INSERT INTO APPLICANT VALUES (9,2)
+INSERT INTO APPLICANT VALUES (14,2)
+
+INSERT INTO APPLICANT VALUES (25,3)
+INSERT INTO APPLICANT VALUES (27,3)
+INSERT INTO APPLICANT VALUES (29,3)
+INSERT INTO APPLICANT VALUES (35,3)
+
+INSERT INTO APPLICANT VALUES (32,4)
+INSERT INTO APPLICANT VALUES (10,4)
+INSERT INTO APPLICANT VALUES (19,4)
+INSERT INTO APPLICANT VALUES (24,4)
+
+INSERT INTO APPLICANT VALUES (5,5)
+INSERT INTO APPLICANT VALUES (7,5)
+INSERT INTO APPLICANT VALUES (13,5)
+INSERT INTO APPLICANT VALUES (17,5)
+INSERT INTO APPLICANT VALUES (24,5)
+
+INSERT INTO APPLICANT VALUES (8,6)
+INSERT INTO APPLICANT VALUES (40,6)
+INSERT INTO APPLICANT VALUES (39,6)
+INSERT INTO APPLICANT VALUES (29,6)
+INSERT INTO APPLICANT VALUES (17,6)
+
+
+INSERT INTO APPLICANT VALUES (8,7)
+INSERT INTO APPLICANT VALUES (16,7)
+INSERT INTO APPLICANT VALUES (27,7)
+INSERT INTO APPLICANT VALUES (30,7)
+
+
+
+/**************** INVERT (inviterID,invetedID) ********************/
+INSERT INTO INVITE values (1,50)
+INSERT INTO INVITE values (4,51)
+INSERT INTO INVITE values (12,52)
+INSERT INTO INVITE values (17,53)
+INSERT INTO INVITE values (23,54)
